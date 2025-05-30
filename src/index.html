@@ -4,15 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css"> <!-- no need for a path when they in the same folder, use paths for ref to differnt folders not in the root -->
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <title>KanBan</title>
 </head>
 
-<body>
+<body class="bg-[#F4F7FD]">
     <!-- Header section with the kanban svg -->
     <!-- Mobile first -->
      <header>
-        
+        <img src="/images/logo-light.svg" alt="Kanban Logo">
      </header>
+
+     <main class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <!-- First column ToDo -->
+         <div class="flex flex-col gap-4">
+            <div class="flex flex-row"><img src="/images/Oval.png" alt="">TODO</div>
+            <div class="card-styling">Launch Epic Career 🚀</div>
+            <div class="card-styling">Conquer React ⚛️</div>
+            <div class="card-styling">Understand Databases ⚙️</div>
+            <div class="card-styling">Crush Frameworks 🖼️</div>
+         </div>
+        <!-- Second Doing -->
+        <div class="flex flex-col gap-4">
+            <div class="flex flex-row"><img src="/images/Oval.png" alt="">DOING</div>
+            <div class="card-styling">Master JavaScript 💛</div>
+            <div class="card-styling"> Never Give Up 🏆</div>
+         </div>
+        <!-- Third Done -->
+        <div class="flex flex-col gap-4">
+            <div class="flex flex-row"><img src="/images/Oval.png" alt="">DONE</div>
+            <div class="card-styling">Explore ES6 Features 🚀</div>
+            <div class="card-styling">Have fun 🥳</div>
+         </div>
+     </main>
+
+     <footer>
+
+     </footer>
 </body>
 
 </html>

@@ -1,3 +1,8 @@
 /* Try to only create custom classes for repeated code otherwise it defeats the main point of Tailwind */
 
 @import "tailwindcss";
+
+.card-styling {
+    @apply rounded-lg bg-[#FFFFFF] font-bold leading-[100%] text-[15px] tracking-[0px] font-['Plus_Jakarta_Sans'];
+    box-shadow: 0px 4px 6px 0px #364E7E1A;
+}
