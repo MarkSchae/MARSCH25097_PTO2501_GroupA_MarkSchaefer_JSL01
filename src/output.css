@@ -7,7 +7,10 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-white: #fff;
     --spacing: 0.25rem;
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
     --default-font-family: var(--font-sans);
@@ -160,11 +163,38 @@
   }
 }
 @layer utilities {
+  .col-span-full {
+    grid-column: 1 / -1;
+  }
+  .mr-3\.5 {
+    margin-right: calc(var(--spacing) * 3.5);
+  }
   .flex {
     display: flex;
   }
   .grid {
     display: grid;
+  }
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+  .h-\[15px\] {
+    height: 15px;
+  }
+  .w-72 {
+    width: calc(var(--spacing) * 72);
+  }
+  .w-\[15px\] {
+    width: 15px;
+  }
+  .w-\[375px\] {
+    width: 375px;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -178,21 +208,93 @@
   .flex-row {
     flex-direction: row;
   }
+  .items-center {
+    align-items: center;
+  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
   .bg-\[\#F4F7FD\] {
     background-color: #F4F7FD;
   }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
+  .pt-8 {
+    padding-top: calc(var(--spacing) * 8);
+  }
+  .pl-5 {
+    padding-left: calc(var(--spacing) * 5);
+  }
+  .pl-8 {
+    padding-left: calc(var(--spacing) * 8);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-\[12px\] {
+    font-size: 12px;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .text-\[\#828FA3\] {
+    color: #828FA3;
+  }
+  .sm\:grid {
+    @media (width >= 40rem) {
+      display: grid;
+    }
+  }
+  .sm\:h-\[30px\] {
+    @media (width >= 40rem) {
+      height: 30px;
+    }
+  }
+  .sm\:w-\[169px\] {
+    @media (width >= 40rem) {
+      width: 169px;
+    }
+  }
   .sm\:grid-cols-3 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+  .sm\:grid-cols-\[300px_1fr\] {
+    @media (width >= 40rem) {
+      grid-template-columns: 300px 1fr;
+    }
+  }
+  .sm\:grid-rows-\[97px_1fr\] {
+    @media (width >= 40rem) {
+      grid-template-rows: 97px 1fr;
+    }
+  }
+  .sm\:grid-rows-\[1024px\] {
+    @media (width >= 40rem) {
+      grid-template-rows: 1024px;
+    }
+  }
+  .sm\:bg-white {
+    @media (width >= 40rem) {
+      background-color: var(--color-white);
+    }
+  }
 }
 .card-styling {
+  display: flex;
+  height: calc(var(--spacing) * 16);
+  width: calc(var(--spacing) * 72);
+  align-items: center;
   border-radius: var(--radius-lg);
   background-color: #FFFFFF;
+  padding-left: calc(var(--spacing) * 5);
   font-family: 'Plus Jakarta Sans';
   font-size: 15px;
   --tw-leading: 100%;
@@ -223,11 +325,11 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-leading {
+@property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
-@property --tw-font-weight {
+@property --tw-leading {
   syntax: "*";
   inherits: false;
 }
@@ -243,8 +345,8 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
-      --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-leading: initial;
       --tw-tracking: initial;
     }
   }
