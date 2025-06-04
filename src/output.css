@@ -169,11 +169,17 @@
   .mr-3\.5 {
     margin-right: calc(var(--spacing) * 3.5);
   }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
   .flex {
     display: flex;
   }
   .grid {
     display: grid;
+  }
+  .hidden {
+    display: none;
   }
   .h-4 {
     height: calc(var(--spacing) * 4);
@@ -184,11 +190,17 @@
   .h-\[15px\] {
     height: 15px;
   }
+  .h-\[48px\] {
+    height: 48px;
+  }
   .w-72 {
     width: calc(var(--spacing) * 72);
   }
   .w-\[15px\] {
     width: 15px;
+  }
+  .w-\[276px\] {
+    width: 276px;
   }
   .w-\[375px\] {
     width: 375px;
@@ -214,6 +226,22 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
+  .rounded-tr-\[100px\] {
+    border-top-right-radius: 100px;
+  }
+  .rounded-br-\[100px\] {
+    border-bottom-right-radius: 100px;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-\[\#E4EBFA\] {
+    border-color: #E4EBFA;
+  }
+  .bg-\[\#635FC7\] {
+    background-color: #635FC7;
+  }
   .bg-\[\#F4F7FD\] {
     background-color: #F4F7FD;
   }
@@ -232,6 +260,9 @@
   .pl-8 {
     padding-left: calc(var(--spacing) * 8);
   }
+  .font-\[\'Plus_Jakarta_Sans\'\] {
+    font-family: 'Plus Jakarta Sans';
+  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -239,12 +270,34 @@
   .text-\[12px\] {
     font-size: 12px;
   }
+  .leading-\[48px\] {
+    --tw-leading: 48px;
+    line-height: 48px;
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
   .text-\[\#828FA3\] {
     color: #828FA3;
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .sm\:mb-12 {
+    @media (width >= 40rem) {
+      margin-bottom: calc(var(--spacing) * 12);
+    }
+  }
+  .sm\:block {
+    @media (width >= 40rem) {
+      display: block;
+    }
+  }
+  .sm\:flex {
+    @media (width >= 40rem) {
+      display: flex;
+    }
   }
   .sm\:grid {
     @media (width >= 40rem) {
@@ -286,6 +339,11 @@
       background-color: var(--color-white);
     }
   }
+  .sm\:pl-8 {
+    @media (width >= 40rem) {
+      padding-left: calc(var(--spacing) * 8);
+    }
+  }
 }
 .card-styling {
   display: flex;
@@ -325,11 +383,16 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-font-weight {
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
   syntax: "*";
   inherits: false;
 }
-@property --tw-leading {
+@property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
@@ -345,8 +408,9 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
-      --tw-font-weight: initial;
+      --tw-border-style: solid;
       --tw-leading: initial;
+      --tw-font-weight: initial;
       --tw-tracking: initial;
     }
   }
