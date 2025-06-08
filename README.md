@@ -6,7 +6,7 @@ A responsive Kanban board built with HTML and Tailwind CSS, designed to help use
 
 🔹 Basic Structure:
 
-- A Kanban board usually has three columns (but can have more):
+- A Kanban board usually has three columns:
 
 - To Do – tasks that need to be started
 
@@ -71,9 +71,8 @@ Open the folder in VS Code.
 
 In the terminal (I use the Ubuntu terminal inside VS Code/your terminal of choice), make sure you're in the project directory:
 
-cd JSL-01-2025 or open the folder directly from VS Code
+cd into the folder directory or open the folder directly from VS Code
 Run Tailwind's build process to generate output.css:
-
 npx tailwindcss -i ./input.css -o ./output.css --watch
 This should watch for changes and automatically recompile Tailwind CSS. If the watch is not working then remove it and rebuild manually.
 
@@ -84,11 +83,12 @@ You should now see the Kanban board layout with styled columns and cards. The la
 
 ## Example
 
-![Desktop Kanban](/images/favicon.svg) Placeholder for now
+![Desktop Kanban](/images/JSL-01-Desktop.png)
 
-![Mobile Kanban](/images/icon-board.svg) Placeholder
+![Mobile Kanban](/images/JSL-01-Mobile.png)
 
 
 ## 🛠️ Future Improvements
 
-Add interactivity with JS
+- Add interactivity with JS
+- Persisting data via the addition of a server and a backend JS framework/server-side framework

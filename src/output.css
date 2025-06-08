@@ -193,9 +193,6 @@
   .h-\[48px\] {
     height: 48px;
   }
-  .w-72 {
-    width: calc(var(--spacing) * 72);
-  }
   .w-\[15px\] {
     width: 15px;
   }
@@ -204,6 +201,12 @@
   }
   .w-\[375px\] {
     width: 375px;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-\[288px\] {
+    max-width: 288px;
   }
   .shrink-0 {
     flex-shrink: 0;
@@ -348,7 +351,8 @@
 .card-styling {
   display: flex;
   height: calc(var(--spacing) * 16);
-  width: calc(var(--spacing) * 72);
+  width: 100%;
+  max-width: 288px;
   align-items: center;
   border-radius: var(--radius-lg);
   background-color: #FFFFFF;
